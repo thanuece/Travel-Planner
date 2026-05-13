@@ -1,0 +1,9 @@
+From,To,Type,Price
+Hyderabad,Warangal,Bus,500
+Hyderabad,Warangal,Train,300
+Hyderabad,Warangal,Flight,2000
+Warangal,Tirupati,Bus,800
+Warangal,Tirupati,Train,600
+Warangal,Tirupati,Flight,2500
+Hyderabad,Tirupati,Train,900
+Hyderabad,Tirupati,Flight,3000

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart Travel Planner</title>
+<style>
+body {
+  font-family: Arial;
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  text-align: center;
+  padding-top: 50px;
+}
+form {
+  background: white;
+  padding: 20px;
+  display: inline-block;
+  border-radius: 10px;
+}
+input, select {
+  padding: 8px;
+  margin: 10px;
+}
+button {
+  padding: 10px;
+  background: green;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Multi-City Travel Planner ✈️</h1>
+
+<form action="/result" method="post">
+  Budget: <input type="number" name="budget"><br>
+  From: <input type="text" name="source"><br>
+  Via: <input type="text" name="mid"><br>
+  To: <input type="text" name="destination"><br>
+  Days: <input type="number" name="days"><br>
+
+  Travel Mode:
+  <select name="mode">
+    <option value="cheap">Cheap</option>
+    <option value="fast">Fast</option>
+    <option value="comfort">Comfort</option>
+  </select><br>
+
+  Hotel Type:
+  <select name="hotel_type">
+    <option value="Cheap">Cheap</option>
+    <option value="Medium">Medium</option>
+    <option value="Luxury">Luxury</option>
+  </select><br>
+
+  <button type="submit">Plan Trip</button>
+</form>
+
+</body>
+</html>

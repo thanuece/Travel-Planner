@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Result</title>
+<style>
+body { font-family: Arial; text-align: center; background:#f2f2f2; }
+.container { background: white; padding: 20px; margin: 50px auto; width: 50%; }
+.green { color: green; }
+.red { color: red; }
+button { padding:10px; background:blue; color:white; }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Trip Plan ✈️</h2>
+
+<p><b>Route 1:</b> {{t1.Type}} - ₹{{t1.Price}}</p>
+<p><b>Route 2:</b> {{t2.Type}} - ₹{{t2.Price}}</p>
+
+<p><b>Hotel:</b> {{h.Hotel}} ({{h.Type}}) - ₹{{h.Price}}</p>
+<p><b>Food:</b> {{f.Food}} - ₹{{f.Price}}</p>
+
+<h3>Total Cost: ₹{{total}}</h3>
+
+{% if total <= budget %}
+<p class="green">Within Budget ✅</p>
+{% else %}
+<p class="red">Over Budget ❌</p>
+{% endif %}
+
+<p>Remaining Budget: ₹{{remaining}}</p>
+
+<hr>
+
+<h3>Places to Visit in {{mid}}</h3>
+<ul>
+{% for p in place_list %}
+<li>{{p}}</li>
+{% endfor %}
+</ul>
+
+<form action="/book">
+<button>Book Now</button>
+</form>
+
+</div>
+
+</body>
+</html>
